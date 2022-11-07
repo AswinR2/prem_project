@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/assets/style.css">
+</head>
+
+<body>
+    <div class="headerdiv">
+      <img src="/public/images/premlogo.png" alt="Premier League" width="37%" height="37%">
+    </div> 
+
+    <form action="/add_player" method="POST">
+      <div class="form-row">
+        <div class="col-4">
+          <input type="text" name="nationality" class="form-control" placeholder="nationality">
+        </div>
+        <div class="col-4">
+          <!-- <input type="text" name="clubname" class="form-control" placeholder="club"> -->
+          <label for="clubname">Club:</label>
+          <select name="clubname" id="clubname">
+            <% if(userData.lenght!=0){var i=1; userData.forEach(function(data){
+              %>
+            <option value=<%=data.ID%>><%=data.clubname%></option>
+            <% i++; }) %> <%} else{%>
+              <option value="No Data">No Data</option>
+              <%}%>
+            // ...
+          </select>
+
+        </div>
+
+
+
+        <div class="col">
+          <input type="text" name="playername" class="form-control" placeholder="name">
+        </div>
+      </div>
+      <h1></h1>
+      <div class="form-row">
+        <div class="col-4">
+          <input type="text" name="position" class="form-control" placeholder="position">
+        </div>
+        <div class="col-4">
+          <input type="number" name="age" class="form-control" placeholder="age">
+        </div>
+        <div class="col">
+          <input type="number" name="jerseynumber" class="form-control" placeholder="jersey_number">
+        </div>
+      </div>
+      <button type="submit" class="btn submit">Submit</button>
+    </form>
+    
+    
+</body>
+</html>

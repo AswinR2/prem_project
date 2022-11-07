@@ -16,7 +16,7 @@
 <body>
 
   <div class="headerdiv">
-    <img src="/public/images/premlogo.png" alt="Premier League" width="600" height="250">
+    <img src="/public/images/premlogo.png" alt="Premier League" width="37%" height="37%">
   </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -43,7 +43,7 @@
       </div>
 
       <div id="addtoright">
-        <a href="#">Add players</a>
+        <a href="/add_player">Add players</a>
       </div>
     </div>
   </nav>
@@ -62,7 +62,7 @@
     <% if(userData.lenght!=0){var i=1; userData.forEach(function(data){ %>
       <tr>
         <td>
-          <%=data.club_ID%>
+          <%=data.clubname%>
         </td>
         <td>
           <%=data.playername%>
@@ -90,4 +90,3 @@
 </body>
 
 </html>
-<!-- TESTED 3 -->

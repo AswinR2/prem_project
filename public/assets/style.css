@@ -1,0 +1,89 @@
+body {
+    background-color: #e4f5cb;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+table {
+    border-collapse: collapse;
+    width: 38%;
+}
+
+th, td {
+    padding:10px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+th {
+    background-color: yellow;
+}
+
+::-webkit-scrollbar{
+    width: 1.25em;
+}
+
+::-webkit-scrollbar-track{
+    background: #33cccc;
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #3366ff;
+    border-radius: 100vw;
+    border: .25em solid#33cccc;
+}
+
+tr:hover {
+    background-color: lime;
+}
+
+.headerdiv {
+
+    background-color: white;
+    width: 100%;
+}
+
+#maindiv {
+    display: flex;
+    width: 100%;
+}
+
+#addtoright {
+    flex: 1;
+    border: 2px solid #f8f9fa;
+    text-align: right;
+}
+
+#navbarNav {
+    margin-right: 20px;
+}
+
+#addtoright a {
+    color: #f8f9fa;
+    display:grid;
+    height: 25px;
+    width: 100px;
+    background: linear-gradient(to right,
+        #80ccff,
+        #33cccc
+    );
+    position:absolute;
+    margin:auto;
+    left: 94%;
+    top: 30%;
+    place-items: center;
+    text-decoration: none;
+    transition: ease-in-out;
+}
+
+#addtoright a:hover {
+    background:linear-gradient(to right,
+    #3366ff,
+    #33ccff
+    );
+}
